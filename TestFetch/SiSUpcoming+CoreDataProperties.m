@@ -1,5 +1,5 @@
 //
-//  SiSCourse+CoreDataProperties.m
+//  SiSUpcoming+CoreDataProperties.m
 //  TestFetch
 //
 //  Created by Stanly Shiyanovskiy on 13.10.16.
@@ -9,12 +9,13 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "SiSCourse+CoreDataProperties.h"
+#import "SiSUpcoming+CoreDataProperties.h"
 
-@implementation SiSCourse (CoreDataProperties)
+@implementation SiSUpcoming (CoreDataProperties)
 
-@dynamic title;
-@dynamic url;
-@dynamic upcoming;
+@dynamic start_date;
+@dynamic end_date;
+@dynamic instructor;
+@dynamic location;
 
 @end

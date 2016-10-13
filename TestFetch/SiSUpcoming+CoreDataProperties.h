@@ -1,5 +1,5 @@
 //
-//  SiSCourse+CoreDataProperties.h
+//  SiSUpcoming+CoreDataProperties.h
 //  TestFetch
 //
 //  Created by Stanly Shiyanovskiy on 13.10.16.
@@ -9,15 +9,16 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "SiSCourse.h"
+#import "SiSUpcoming.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SiSCourse (CoreDataProperties)
+@interface SiSUpcoming (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *title;
-@property (nullable, nonatomic, retain) NSString *url;
-@property (nullable, nonatomic, retain) SiSUpcoming *upcoming;
+@property (nullable, nonatomic, retain) NSDate *start_date;
+@property (nullable, nonatomic, retain) NSDate *end_date;
+@property (nullable, nonatomic, retain) NSString *instructor;
+@property (nullable, nonatomic, retain) NSString *location;
 
 @end
 
