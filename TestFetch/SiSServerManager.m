@@ -70,6 +70,7 @@ static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
                                  SiSCourse* course =
                                  [NSEntityDescription insertNewObjectForEntityForName:@"SiSCourse"
                                                                inManagedObjectContext:[[SiSDataManager sharedManager] managedObjectContext]];
+
                                  course.title = [NSString stringWithFormat:@"%@", titleDict];
                                  course.url = URL;
                                  

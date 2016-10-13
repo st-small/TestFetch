@@ -11,7 +11,6 @@
 #import "SiSDataManager.h"
 #import "SiSCourse.h"
 
-
 @interface SiSTableViewController ()
 
 @property (assign, nonatomic) BOOL loadingData;
@@ -101,7 +100,6 @@ static NSInteger RowsInRequest = 5;
     NSLog(@"\nколичество в массиве: %d", self.jsonArray.count);
     
     SiSCourse* course = [self.jsonArray objectAtIndex:indexPath.row];
-    
     cell.textLabel.text = course.title;
     
     NSLog(@"%d %@", indexPath.row, cell.textLabel.text);

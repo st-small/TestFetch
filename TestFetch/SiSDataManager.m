@@ -44,25 +44,20 @@
 - (NSArray*) allObjects {
     
     NSFetchRequest* request = [[NSFetchRequest alloc] init];
-    
     NSEntityDescription* description =
     [NSEntityDescription entityForName:@"SiSCourse"
                 inManagedObjectContext:self.managedObjectContext];
-    
     [request setEntity:description];
     
     NSError* requestError = nil;
     NSArray* resultArray =
     [self.managedObjectContext executeFetchRequest:request
                                              error:&requestError];
-    
     for (SiSCourse* obj in resultArray) {
-        
         NSLog(@"%@ %@", obj.title, obj.url);
     }
     
     if (requestError) {
-        
         NSLog(@"%@", [requestError localizedDescription]);
     }
     
@@ -72,7 +67,6 @@
 - (void) printAllObjects {
     
     NSArray* allObjects = [self allObjects];
-    
     for (SiSCourse* obj in allObjects) {
         
         NSLog(@"%@ %@", obj.title, obj.url);
@@ -82,9 +76,7 @@
 - (void) deleteAllObjects {
     
     NSArray* allObjects = [self allObjects];
-    
     for (id object in allObjects) {
-        
         [self.managedObjectContext deleteObject:object];
     }
     
@@ -121,7 +113,7 @@
     
     if ([self isCoreDataForEmpty] > 1) {
         
-        //NSLog(@"%@", ([self isCoreDataForEmpty] < 1) ? @"YES -> EMPTY" : @"NO -> NO EMPTY");
+        NSLog(@"%@", ([self isCoreDataForEmpty] < 1) ? @"YES -> EMPTY" : @"NO -> NO EMPTY");
         success(resultArray);
         
     } else {
@@ -129,9 +121,9 @@
         failure(requestError);
     }
     
-//    for (SiSCourse* obj in resultArray) {
-//        NSLog(@"RESULTARRAY PRINTING: %@ %@", obj.title, obj.url);
-//    }
+    for (SiSCourse* obj in resultArray) {
+        NSLog(@"RESULTARRAY PRINTING: %@ %@", obj.title, obj.url);
+    }
     
 }
 

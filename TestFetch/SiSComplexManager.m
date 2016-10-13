@@ -22,8 +22,15 @@
 
 + (SiSComplexManager*) sharedManager {
     
-    SiSComplexManager* manager = [[SiSComplexManager alloc] init];
-
+    static SiSComplexManager* manager = nil;
+    
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        
+        manager = [[SiSComplexManager alloc] init];
+    });
+    
     return manager;
 }
 
@@ -48,8 +55,6 @@
                             onSuccess:^(NSArray* data) {
                                 
                                 NSLog(@"Will get DATA from CORE DATA!!!");
-                                
-                                NSLog(@"data.count %d", data.count);
                                 
                                 success(data);
                                 
