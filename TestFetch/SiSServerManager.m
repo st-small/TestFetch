@@ -7,8 +7,9 @@
 //
 
 #import "SiSServerManager.h"
+#import "SiSDataManager.h"
 #import "AFNetworking.h"
-#import "SiSProduct.h"
+#import "SiSCourse.h"
 
 static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
 
@@ -36,14 +37,7 @@ static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
 
 + (SiSServerManager*) sharedManager {
     
-    static SiSServerManager* manager = nil;
-    
-    static dispatch_once_t onceToken;
-    
-    dispatch_once (&onceToken, ^{
-        
-        manager = [[SiSServerManager alloc] init];
-    });
+    SiSServerManager* manager = [[SiSServerManager alloc] init];
     
     return manager;
 }
@@ -70,9 +64,18 @@ static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
                                                           
                              if (singleProduct.count > 0) {
                                  
-                                 SiSProduct* product = [[SiSProduct alloc] initWithServerResponse: singleProduct];
+                                 NSDictionary* titleDict = singleProduct[@"title"];
+                                 NSString* URL = [NSString stringWithFormat:@"%@", singleProduct[@"url"]];
                                  
-                                 [objectsArray addObject:product];
+                                 SiSCourse* course =
+                                 [NSEntityDescription insertNewObjectForEntityForName:@"SiSCourse"
+                                                               inManagedObjectContext:[[SiSDataManager sharedManager] managedObjectContext]];
+                                 course.title = [NSString stringWithFormat:@"%@", titleDict];
+                                 course.url = URL;
+                                 
+                                 [objectsArray addObject:course];
+                                 
+                                 //NSLog(@"The course is: %@ and %@", course.title, course.url);
                              }
                          }
                          

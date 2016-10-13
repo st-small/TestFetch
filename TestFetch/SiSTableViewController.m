@@ -8,8 +8,9 @@
 
 #import "SiSTableViewController.h"
 #import "SiSComplexManager.h"
-#import "SiSProduct.h"
-#import "SiSCourseDetail.h"
+#import "SiSDataManager.h"
+#import "SiSCourse.h"
+
 
 @interface SiSTableViewController ()
 
@@ -26,9 +27,7 @@ static NSInteger RowsInRequest = 5;
     [super viewDidLoad];
     
     self.jsonArray = [NSMutableArray array];
-    
     self.loadingData = YES;
-    
     self.navigationItem.title = @"Список курсов:";
     
     [self.navigationController.navigationBar setTitleTextAttributes:
@@ -63,16 +62,13 @@ static NSInteger RowsInRequest = 5;
              [newPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
          }
          
-         dispatch_async(dispatch_get_main_queue(), ^{
-             
-             [self.tableView beginUpdates];
-             [self.tableView insertRowsAtIndexPaths:newPaths
-                                   withRowAnimation:UITableViewRowAnimationTop];
-             [self.tableView endUpdates];
-             
-             self.loadingData = NO;
-             
-         });
+         [self.tableView beginUpdates];
+         [self.tableView insertRowsAtIndexPaths:newPaths
+                               withRowAnimation:UITableViewRowAnimationTop];
+
+         [self.tableView endUpdates];
+         
+         self.loadingData = NO;
          
      }
      onFailure:^(NSError *error) {
@@ -82,11 +78,6 @@ static NSInteger RowsInRequest = 5;
     
 }
 
-
-- (void) refresh {
-    
-    [self.tableView reloadData];
-}
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -103,28 +94,35 @@ static NSInteger RowsInRequest = 5;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    for (SiSCourse* obj in self.jsonArray) {
+//        NSLog(@"\nпечтаю массив: %@", obj.title);
+//    }
     
-    SiSProduct* product = [self.jsonArray objectAtIndex:indexPath.row];
+    NSLog(@"\nколичество в массиве: %d", self.jsonArray.count);
     
-    cell.textLabel.text = product.title;
+    SiSCourse* course = [self.jsonArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = course.title;
+    
+    NSLog(@"%d %@", indexPath.row, cell.textLabel.text);
     
     return cell;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[segue identifier] isEqualToString:@"SiSCourseDetail"]) {
-       
-        NSIndexPath* selectedIndexPath = [self.tableView indexPathForCell:sender];
-        SiSCourseDetail* vc = [segue destinationViewController];
-        vc.product = [self.jsonArray objectAtIndex:selectedIndexPath.row];
-        
-    }
+//    if ([[segue identifier] isEqualToString:@"SiSCourseDetail"]) {
+//       
+//        NSIndexPath* selectedIndexPath = [self.tableView indexPathForCell:sender];
+//        SiSCourseDetail* vc = [segue destinationViewController];
+//        vc.product = [self.jsonArray objectAtIndex:selectedIndexPath.row];
+//        
+//    }
 }
 
 - (void)refresh:(UIRefreshControl *)refreshControl {
     [self.tableView reloadData];
+    self.loadingData = NO;
     [refreshControl endRefreshing];
 }
 

@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11A60C04552BF08B6B29B80B /* libPods-TestFetch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82647C6919C3399A04900721 /* libPods-TestFetch.a */; };
 		528A84031DAE68AF0076043A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84021DAE68AF0076043A /* main.m */; };
 		528A84061DAE68AF0076043A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84051DAE68AF0076043A /* AppDelegate.m */; };
-		528A84091DAE68AF0076043A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84081DAE68AF0076043A /* ViewController.m */; };
 		528A840C1DAE68AF0076043A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A840A1DAE68AF0076043A /* Main.storyboard */; };
 		528A840F1DAE68AF0076043A /* TestFetch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 528A840D1DAE68AF0076043A /* TestFetch.xcdatamodeld */; };
 		528A84111DAE68AF0076043A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528A84101DAE68AF0076043A /* Assets.xcassets */; };
 		528A84141DAE68AF0076043A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A84121DAE68AF0076043A /* LaunchScreen.storyboard */; };
 		528A841F1DAE68AF0076043A /* TestFetchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A841E1DAE68AF0076043A /* TestFetchTests.m */; };
 		528A842A1DAE68AF0076043A /* TestFetchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84291DAE68AF0076043A /* TestFetchUITests.m */; };
+		528A843B1DAE72360076043A /* SiSCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84381DAE72360076043A /* SiSCourse+CoreDataProperties.m */; };
+		528A843C1DAE72360076043A /* SiSCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A843A1DAE72360076043A /* SiSCourse.m */; };
+		528A84471DAE802E0076043A /* SiSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84461DAE802E0076043A /* SiSDataManager.m */; };
+		528A84511DAE8B6E0076043A /* SiSServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84501DAE8B6E0076043A /* SiSServerManager.m */; };
+		528A84551DAE8E9F0076043A /* SiSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84541DAE8E9F0076043A /* SiSTableViewController.m */; };
+		528A84581DAE94D60076043A /* SiSComplexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84571DAE94D60076043A /* SiSComplexManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F5E53CF438E8725DF7768C2 /* Pods-TestFetch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFetch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFetch/Pods-TestFetch.debug.xcconfig"; sourceTree = "<group>"; };
 		528A83FE1DAE68AF0076043A /* TestFetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528A84021DAE68AF0076043A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		528A84041DAE68AF0076043A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		528A84051DAE68AF0076043A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		528A84071DAE68AF0076043A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		528A84081DAE68AF0076043A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		528A840B1DAE68AF0076043A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		528A840E1DAE68AF0076043A /* TestFetch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestFetch.xcdatamodel; sourceTree = "<group>"; };
 		528A84101DAE68AF0076043A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +58,21 @@
 		528A84251DAE68AF0076043A /* TestFetchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFetchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528A84291DAE68AF0076043A /* TestFetchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFetchUITests.m; sourceTree = "<group>"; };
 		528A842B1DAE68AF0076043A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528A84371DAE72360076043A /* SiSCourse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SiSCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
+		528A84381DAE72360076043A /* SiSCourse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SiSCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
+		528A84391DAE72360076043A /* SiSCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSCourse.h; sourceTree = "<group>"; };
+		528A843A1DAE72360076043A /* SiSCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCourse.m; sourceTree = "<group>"; };
+		528A84451DAE802E0076043A /* SiSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSDataManager.h; sourceTree = "<group>"; };
+		528A84461DAE802E0076043A /* SiSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSDataManager.m; sourceTree = "<group>"; };
+		528A844F1DAE8B6E0076043A /* SiSServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSServerManager.h; sourceTree = "<group>"; };
+		528A84501DAE8B6E0076043A /* SiSServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSServerManager.m; sourceTree = "<group>"; };
+		528A84521DAE8B770076043A /* SiSManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SiSManagerProtocol.h; sourceTree = "<group>"; };
+		528A84531DAE8E9F0076043A /* SiSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSTableViewController.h; sourceTree = "<group>"; };
+		528A84541DAE8E9F0076043A /* SiSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSTableViewController.m; sourceTree = "<group>"; };
+		528A84561DAE94D60076043A /* SiSComplexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSComplexManager.h; sourceTree = "<group>"; };
+		528A84571DAE94D60076043A /* SiSComplexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSComplexManager.m; sourceTree = "<group>"; };
+		82647C6919C3399A04900721 /* libPods-TestFetch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestFetch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0319A1328AC463BFA4206A /* Pods-TestFetch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFetch.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFetch/Pods-TestFetch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A60C04552BF08B6B29B80B /* libPods-TestFetch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E53BF3DB297506F8334318 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82647C6919C3399A04900721 /* libPods-TestFetch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		528A83F51DAE68AF0076043A = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +116,8 @@
 				528A841D1DAE68AF0076043A /* TestFetchTests */,
 				528A84281DAE68AF0076043A /* TestFetchUITests */,
 				528A83FF1DAE68AF0076043A /* Products */,
+				54A79B42A4DB6677B7F328DF /* Pods */,
+				02E53BF3DB297506F8334318 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +134,17 @@
 		528A84001DAE68AF0076043A /* TestFetch */ = {
 			isa = PBXGroup;
 			children = (
+				528A844E1DAE86DE0076043A /* ViewControllers */,
+				528A843D1DAE72430076043A /* Models */,
 				528A84041DAE68AF0076043A /* AppDelegate.h */,
 				528A84051DAE68AF0076043A /* AppDelegate.m */,
-				528A84071DAE68AF0076043A /* ViewController.h */,
-				528A84081DAE68AF0076043A /* ViewController.m */,
+				528A84561DAE94D60076043A /* SiSComplexManager.h */,
+				528A84571DAE94D60076043A /* SiSComplexManager.m */,
+				528A844F1DAE8B6E0076043A /* SiSServerManager.h */,
+				528A84501DAE8B6E0076043A /* SiSServerManager.m */,
+				528A84451DAE802E0076043A /* SiSDataManager.h */,
+				528A84461DAE802E0076043A /* SiSDataManager.m */,
+				528A84521DAE8B770076043A /* SiSManagerProtocol.h */,
 				528A840A1DAE68AF0076043A /* Main.storyboard */,
 				528A84101DAE68AF0076043A /* Assets.xcassets */,
 				528A84121DAE68AF0076043A /* LaunchScreen.storyboard */,
@@ -143,6 +181,35 @@
 			path = TestFetchUITests;
 			sourceTree = "<group>";
 		};
+		528A843D1DAE72430076043A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				528A84371DAE72360076043A /* SiSCourse+CoreDataProperties.h */,
+				528A84381DAE72360076043A /* SiSCourse+CoreDataProperties.m */,
+				528A84391DAE72360076043A /* SiSCourse.h */,
+				528A843A1DAE72360076043A /* SiSCourse.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		528A844E1DAE86DE0076043A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				528A84531DAE8E9F0076043A /* SiSTableViewController.h */,
+				528A84541DAE8E9F0076043A /* SiSTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		54A79B42A4DB6677B7F328DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F5E53CF438E8725DF7768C2 /* Pods-TestFetch.debug.xcconfig */,
+				CD0319A1328AC463BFA4206A /* Pods-TestFetch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 528A842E1DAE68AF0076043A /* Build configuration list for PBXNativeTarget "TestFetch" */;
 			buildPhases = (
+				3E308BA22EEDF5A99F002609 /* [CP] Check Pods Manifest.lock */,
 				528A83FA1DAE68AF0076043A /* Sources */,
 				528A83FB1DAE68AF0076043A /* Frameworks */,
 				528A83FC1DAE68AF0076043A /* Resources */,
+				E0A262DBD39D9BA237713F2A /* [CP] Embed Pods Frameworks */,
+				F1FD89D78D825FCAAB4C4006 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +275,7 @@
 		528A83F61DAE68AF0076043A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SiS;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Stanly Shiyanovskiy";
 				TargetAttributes = {
@@ -268,13 +339,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E308BA22EEDF5A99F002609 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0A262DBD39D9BA237713F2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFetch/Pods-TestFetch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1FD89D78D825FCAAB4C4006 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFetch/Pods-TestFetch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		528A83FA1DAE68AF0076043A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528A84581DAE94D60076043A /* SiSComplexManager.m in Sources */,
+				528A843B1DAE72360076043A /* SiSCourse+CoreDataProperties.m in Sources */,
+				528A84551DAE8E9F0076043A /* SiSTableViewController.m in Sources */,
+				528A84471DAE802E0076043A /* SiSDataManager.m in Sources */,
 				528A840F1DAE68AF0076043A /* TestFetch.xcdatamodeld in Sources */,
-				528A84091DAE68AF0076043A /* ViewController.m in Sources */,
+				528A84511DAE8B6E0076043A /* SiSServerManager.m in Sources */,
+				528A843C1DAE72360076043A /* SiSCourse.m in Sources */,
 				528A84061DAE68AF0076043A /* AppDelegate.m in Sources */,
 				528A84031DAE68AF0076043A /* main.m in Sources */,
 			);
@@ -417,6 +541,7 @@
 		};
 		528A842F1DAE68AF0076043A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5E53CF438E8725DF7768C2 /* Pods-TestFetch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestFetch/Info.plist;
@@ -428,6 +553,7 @@
 		};
 		528A84301DAE68AF0076043A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0319A1328AC463BFA4206A /* Pods-TestFetch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestFetch/Info.plist;
@@ -502,6 +628,7 @@
 				528A84301DAE68AF0076043A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528A84311DAE68AF0076043A /* Build configuration list for PBXNativeTarget "TestFetchTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +637,7 @@
 				528A84331DAE68AF0076043A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528A84341DAE68AF0076043A /* Build configuration list for PBXNativeTarget "TestFetchUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +646,7 @@
 				528A84361DAE68AF0076043A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

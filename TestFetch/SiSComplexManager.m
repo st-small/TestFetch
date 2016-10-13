@@ -7,12 +7,13 @@
 //
 
 #import "SiSComplexManager.h"
-#import "SiSDataBaseManager.h"
+#import "SiSDataManager.h"
 #import "SiSServerManager.h"
+#import "SiSCourse.h"
 
 @interface SiSComplexManager ()
 
-@property (strong, nonatomic) SiSDataBaseManager* dbManager;
+@property (strong, nonatomic) SiSDataManager* dbManager;
 @property (strong, nonatomic) SiSServerManager* serverManager;
 
 @end
@@ -30,7 +31,7 @@
 {
     if (self = [super init]) {
         
-        self.dbManager = [SiSDataBaseManager new];
+        self.dbManager = [SiSDataManager new];
         self.serverManager = [SiSServerManager new];
     }
     
@@ -46,6 +47,10 @@
                              andCount:count
                             onSuccess:^(NSArray* data) {
                                 
+                                NSLog(@"Will get DATA from CORE DATA!!!");
+                                
+                                NSLog(@"data.count %d", data.count);
+                                
                                 success(data);
                                 
                             } onFailure:^(NSError* error) {
@@ -56,14 +61,20 @@
                                                              andCount:count
                                                             onSuccess:^(NSArray* productsArray) {
                                                                 
-                                                                success(productsArray);
+                                                                NSLog(@"productsArray.count %d", productsArray.count);
                                                                 
+                                                                success(productsArray);
+                                                                    
                                                                 //+ Сохраняем данные в DatabaseManager
                                                                 
+                                                                for (SiSCourse* obj in productsArray) {
+                                                                    
+                                                                    [[SiSDataManager sharedManager] addCourseWithTitle:obj.title                                                                                                                andURL:obj.url];
+                                                                    
+                                                                    //NSLog(@"\n%d", [[SiSDataManager sharedManager] isCoreDataForEmpty]);
+                                                                }
                                                                 
-                                                                
-                                                            }
-                                                            onFailure:^(NSError* error) {
+                                                            } onFailure:^(NSError* error) {
                                                                 
                                                                 failure(error);
                                                                 
