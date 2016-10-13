@@ -1,15 +1,15 @@
 //
-//  ViewController.h
+//  SiSCourse.m
 //  TestFetch
 //
 //  Created by Stanly Shiyanovskiy on 12.10.16.
 //  Copyright © 2016 Stanly Shiyanovskiy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SiSCourse.h"
 
-@interface ViewController : UIViewController
+@implementation SiSCourse
 
+// Insert code here to add functionality to your managed object subclass
 
 @end
-
