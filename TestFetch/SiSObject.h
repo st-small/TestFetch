@@ -1,5 +1,5 @@
 //
-//  SiSUpcoming.h
+//  SiSObject.h
 //  TestFetch
 //
 //  Created by Stanly Shiyanovskiy on 14.10.16.
@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SiSObject.h"
-
-@class SiSCourse;
+#import <CoreData/CoreData.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SiSUpcoming : SiSObject
+@interface SiSObject : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -21,4 +19,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "SiSUpcoming+CoreDataProperties.h"
+#import "SiSObject+CoreDataProperties.h"

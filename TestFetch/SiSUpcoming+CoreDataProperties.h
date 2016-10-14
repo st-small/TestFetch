@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SiSUpcoming (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSDate *end_date;
+@property (nullable, nonatomic, retain) NSString *end_date;
 @property (nullable, nonatomic, retain) NSString *instructor;
 @property (nullable, nonatomic, retain) NSString *location;
-@property (nullable, nonatomic, retain) NSDate *start_date;
+@property (nullable, nonatomic, retain) NSString *start_date;
 @property (nullable, nonatomic, retain) SiSCourse *course;
 
 @end
