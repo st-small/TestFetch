@@ -2,7 +2,7 @@
 //  SiSUpcoming+CoreDataProperties.m
 //  TestFetch
 //
-//  Created by Stanly Shiyanovskiy on 13.10.16.
+//  Created by Stanly Shiyanovskiy on 14.10.16.
 //  Copyright © 2016 Stanly Shiyanovskiy. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,9 +13,10 @@
 
 @implementation SiSUpcoming (CoreDataProperties)
 
-@dynamic start_date;
 @dynamic end_date;
 @dynamic instructor;
 @dynamic location;
+@dynamic start_date;
+@dynamic course;
 
 @end
