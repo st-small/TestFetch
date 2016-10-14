@@ -45,14 +45,16 @@
         NSLog(@"%@", [error localizedDescription]);
     }
     
+    NSLog(@"THERE ARE %d ELEMENTS IN COREDATA! ADDING %@ %@", [self isCoreDataForEmpty], course.title, course.url);
+    
     return course;
 }
 
-- (NSArray*) allObjects {
+- (NSArray*) allObjectsByEntity:(NSString*)entity {
     
     NSFetchRequest* request = [[NSFetchRequest alloc] init];
     NSEntityDescription* description =
-    [NSEntityDescription entityForName:@"SiSCourse"
+    [NSEntityDescription entityForName:entity
                 inManagedObjectContext:self.managedObjectContext];
     [request setEntity:description];
     
@@ -60,9 +62,6 @@
     NSArray* resultArray =
     [self.managedObjectContext executeFetchRequest:request
                                              error:&requestError];
-    for (SiSCourse* obj in resultArray) {
-        NSLog(@"%@ %@", obj.title, obj.url);
-    }
     
     if (requestError) {
         NSLog(@"%@", [requestError localizedDescription]);
@@ -71,18 +70,35 @@
     return resultArray;
 }
 
+- (void) printArray:(NSArray*) array {
+    
+    for (id object in array) {
+        
+        if ([object isKindOfClass:[SiSCourse class]]) {
+            SiSCourse* course = (SiSCourse*) object;
+            NSLog(@"COURSE: %@, URL: %@, UPCOMINGS: %u", course.title, course.url, course.upcoming.count);
+            
+        } else if ([object isKindOfClass:[SiSUpcoming class]]) {
+            
+            SiSUpcoming* upcoming = (SiSUpcoming*) object;
+            NSLog(@"UPCOMING: START: %@, END: %@, INSTRUCTOR: %@, LOCATION: %@, COURSE: %@", upcoming.start_date, upcoming.end_date, upcoming.instructor, upcoming.location, upcoming.course.title);
+            
+        }
+        
+    }
+    
+}
+
 - (void) printAllObjects {
     
-    NSArray* allObjects = [self allObjects];
-    for (SiSCourse* obj in allObjects) {
-        
-        NSLog(@"%@ %@", obj.title, obj.url);
-    }
+    NSArray* allObjects = [self allObjectsByEntity:@"SiSObject"];
+    
+    [self printArray:allObjects];
 }
 
 - (void) deleteAllObjects {
     
-    NSArray* allObjects = [self allObjects];
+    NSArray* allObjects = [self allObjectsByEntity:@"SiSObject"];
     for (id object in allObjects) {
         [self.managedObjectContext deleteObject:object];
     }
@@ -112,7 +128,7 @@
     //Запрос к базе
     
     NSError* requestError = nil;
-    NSArray* resultArray = [self allObjects];
+    NSArray* resultArray = [self allObjectsByEntity:@"SiSCourse"];
     
     if (requestError) {
         NSLog(@"%@", [requestError localizedDescription]);
@@ -161,6 +177,10 @@
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         // Report any error we got.
+        
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL
+                                                  error:nil];
+        
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
         dict[NSLocalizedFailureReasonErrorKey] = failureReason;

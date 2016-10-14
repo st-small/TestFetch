@@ -7,16 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SiSProduct.h"
+#import "SiSCourse.h"
 
 @interface SiSCourseDetail : UITableViewController
 
-@property (strong, nonatomic) SiSProduct* product;
+@property (strong, nonatomic) SiSCourse* course;
 
-@property (weak, nonatomic) IBOutlet UILabel *startLabel;
-@property (weak, nonatomic) IBOutlet UILabel *endLabel;
-@property (weak, nonatomic) IBOutlet UILabel *instructorLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 
 @end

@@ -58,6 +58,8 @@
                                 
                                 success(data);
                                 
+                                NSLog(@"dataArray.count %d", data.count);
+                                
                             } onFailure:^(NSError* error) {
                                 
                                 NSLog(@"Database is empty! Will get data from ServerManager!");
@@ -66,18 +68,14 @@
                                                              andCount:count
                                                             onSuccess:^(NSArray* productsArray) {
                                                                 
-                                                                NSLog(@"productsArray.count %d", productsArray.count);
+                                                                //NSLog(@"productsArray.count %d", productsArray.count);
                                                                 
                                                                 success(productsArray);
                                                                     
                                                                 //+ Сохраняем данные в DatabaseManager
                                                                 
-                                                                for (SiSCourse* obj in productsArray) {
-                                                                    
-                                                                    [[SiSDataManager sharedManager] addCourseWithTitle:obj.title                                                                                                                andURL:obj.url];
-                                                                    
-                                                                    //NSLog(@"\n%d", [[SiSDataManager sharedManager] isCoreDataForEmpty]);
-                                                                }
+                                                                [[SiSDataManager sharedManager] saveContext];
+
                                                                 
                                                             } onFailure:^(NSError* error) {
                                                                 

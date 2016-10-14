@@ -37,7 +37,14 @@ static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
 
 + (SiSServerManager*) sharedManager {
     
-    SiSServerManager* manager = [[SiSServerManager alloc] init];
+    static SiSServerManager* manager = nil;
+    
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        
+        manager = [[SiSServerManager alloc] init];
+    });
     
     return manager;
 }
@@ -53,8 +60,6 @@ static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
                      success:^(NSURLSessionTask * task, id  responseObject) {
                          
                          NSArray* rowsArray = [responseObject objectForKey:@"courses"];
-                         
-                         //NSLog(@"%@", rowsArray);
                          
                          NSMutableArray* objectsArray = [NSMutableArray array];
                          
@@ -73,6 +78,31 @@ static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
 
                                  course.title = [NSString stringWithFormat:@"%@", titleDict];
                                  course.url = URL;
+                                 
+                                 NSArray* upcomingsArray = singleProduct[@"upcoming"];
+                                 NSMutableArray* upcObjectsArray = [NSMutableArray array];
+                                 
+                                 for (NSUInteger i = 0; i < upcomingsArray.count; i++) {
+                                     NSDictionary* upcomingDict = upcomingsArray[i];
+                                     if (upcomingDict.count > 0) {
+                                         
+                                         SiSUpcoming* upcoming =
+                                         [NSEntityDescription insertNewObjectForEntityForName:@"SiSUpcoming"
+                                                                       inManagedObjectContext:[[SiSDataManager sharedManager] managedObjectContext]];
+                                         
+                                         upcoming.start_date = [self dateFromNsstring:[NSString stringWithFormat:@"%@", upcomingDict[@"start_date"]]];
+                                         upcoming.end_date = [self dateFromNsstring:[NSString stringWithFormat:@"%@", upcomingDict[@"end_date"]]];
+                                         upcoming.instructor = upcomingDict[@"instructors"];
+                                         upcoming.location = upcomingDict[@"location"];
+                                         
+                                         [upcObjectsArray addObject:upcoming];
+                                         
+                                         //[course addUpcomingObject:upcoming];
+                                     }
+                                     
+                                     [course addUpcoming:[NSSet setWithArray:upcObjectsArray]];
+                                 
+                                 }
                                  
                                  [objectsArray addObject:course];
                                  
@@ -93,6 +123,28 @@ static NSString* originLink = @"http://bookapi.bignerdranch.com/courses.json";
                          }
                      }];
     
+}
+
+- (NSString*) dateFromNsstring:(NSString*)string {
+    
+    //Задаю формат перевода строки в дату
+    NSDateFormatter* dF = [[NSDateFormatter alloc] init];
+    [dF setTimeZone:[NSTimeZone timeZoneWithName:@"EST"]];
+    [dF setDateFormat:@"yyyy-MM-dd"];
+    
+    //Получаю новую строку
+    NSDate* changeDate=[dF dateFromString:string];
+    //NSLog(@"changeDate = %@",changeDate);
+    NSString* str=[dF stringFromDate:changeDate];
+    
+    //Получаю новую дату
+    NSDate* newDate = [dF dateFromString:str];
+    [dF setDateFormat:@"dd MMMM yyyy"];
+    NSString* newStr=[dF stringFromDate:newDate];
+    
+    //NSLog(@"newStr = %@",newStr);
+    
+    return newStr;
 }
 
 @end

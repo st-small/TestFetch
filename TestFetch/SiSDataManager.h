@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "SiSManagerProtocol.h"
 #import "SiSCourse.h"
+#import "SiSUpcoming.h"
 
 @interface SiSDataManager : NSObject <SiSManagerProtocol>
 
@@ -25,6 +26,7 @@
 
 
 - (SiSCourse*) addCourseWithTitle:(NSString*)title andURL:(NSString*)URL;
+- (void) printArray:(NSArray*)array;
 - (void) printAllObjects;
 - (void) deleteAllObjects;
 - (NSUInteger) isCoreDataForEmpty;

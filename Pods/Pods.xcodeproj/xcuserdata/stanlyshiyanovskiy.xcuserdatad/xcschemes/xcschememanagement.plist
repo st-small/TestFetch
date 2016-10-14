@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RATreeView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -22,7 +27,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4470C0F7545559EBFE308EA0584E289</key>
+		<key>98A33900C3FBC3129B71636CB1888C66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9F0D62F0C21F519159A0AFEBEA49DA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

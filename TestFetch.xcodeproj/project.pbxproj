@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		11A60C04552BF08B6B29B80B /* libPods-TestFetch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82647C6919C3399A04900721 /* libPods-TestFetch.a */; };
+		520379821DB0C94500D3B5D3 /* SiSCourseDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379811DB0C94500D3B5D3 /* SiSCourseDetail.m */; };
+		520379951DB0EF4400D3B5D3 /* SiSUpcoming+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5203798A1DB0EF4400D3B5D3 /* SiSUpcoming+CoreDataProperties.m */; };
+		520379961DB0EF4400D3B5D3 /* SiSUpcoming.m in Sources */ = {isa = PBXBuildFile; fileRef = 5203798C1DB0EF4400D3B5D3 /* SiSUpcoming.m */; };
+		520379971DB0EF4400D3B5D3 /* SiSObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5203798E1DB0EF4400D3B5D3 /* SiSObject+CoreDataProperties.m */; };
+		520379981DB0EF4400D3B5D3 /* SiSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379901DB0EF4400D3B5D3 /* SiSObject.m */; };
+		520379991DB0EF4400D3B5D3 /* SiSCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379921DB0EF4400D3B5D3 /* SiSCourse+CoreDataProperties.m */; };
+		5203799A1DB0EF4400D3B5D3 /* SiSCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379941DB0EF4400D3B5D3 /* SiSCourse.m */; };
 		528A84031DAE68AF0076043A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84021DAE68AF0076043A /* main.m */; };
 		528A84061DAE68AF0076043A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84051DAE68AF0076043A /* AppDelegate.m */; };
 		528A840C1DAE68AF0076043A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A840A1DAE68AF0076043A /* Main.storyboard */; };
@@ -20,10 +27,6 @@
 		528A84511DAE8B6E0076043A /* SiSServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84501DAE8B6E0076043A /* SiSServerManager.m */; };
 		528A84551DAE8E9F0076043A /* SiSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84541DAE8E9F0076043A /* SiSTableViewController.m */; };
 		528A84581DAE94D60076043A /* SiSComplexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 528A84571DAE94D60076043A /* SiSComplexManager.m */; };
-		52B93A981DB0016F004D3C3F /* SiSCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B93A911DB0016F004D3C3F /* SiSCourse+CoreDataProperties.m */; };
-		52B93A991DB0016F004D3C3F /* SiSCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B93A931DB0016F004D3C3F /* SiSCourse.m */; };
-		52B93A9A1DB0016F004D3C3F /* SiSUpcoming+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B93A951DB0016F004D3C3F /* SiSUpcoming+CoreDataProperties.m */; };
-		52B93A9B1DB0016F004D3C3F /* SiSUpcoming.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B93A971DB0016F004D3C3F /* SiSUpcoming.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,20 @@
 
 /* Begin PBXFileReference section */
 		1F5E53CF438E8725DF7768C2 /* Pods-TestFetch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFetch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFetch/Pods-TestFetch.debug.xcconfig"; sourceTree = "<group>"; };
+		520379801DB0C94500D3B5D3 /* SiSCourseDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSCourseDetail.h; sourceTree = "<group>"; };
+		520379811DB0C94500D3B5D3 /* SiSCourseDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCourseDetail.m; sourceTree = "<group>"; };
+		520379891DB0EF4300D3B5D3 /* SiSUpcoming+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SiSUpcoming+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5203798A1DB0EF4400D3B5D3 /* SiSUpcoming+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SiSUpcoming+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5203798B1DB0EF4400D3B5D3 /* SiSUpcoming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSUpcoming.h; sourceTree = "<group>"; };
+		5203798C1DB0EF4400D3B5D3 /* SiSUpcoming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSUpcoming.m; sourceTree = "<group>"; };
+		5203798D1DB0EF4400D3B5D3 /* SiSObject+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SiSObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5203798E1DB0EF4400D3B5D3 /* SiSObject+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SiSObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5203798F1DB0EF4400D3B5D3 /* SiSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSObject.h; sourceTree = "<group>"; };
+		520379901DB0EF4400D3B5D3 /* SiSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSObject.m; sourceTree = "<group>"; };
+		520379911DB0EF4400D3B5D3 /* SiSCourse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SiSCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
+		520379921DB0EF4400D3B5D3 /* SiSCourse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SiSCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
+		520379931DB0EF4400D3B5D3 /* SiSCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSCourse.h; sourceTree = "<group>"; };
+		520379941DB0EF4400D3B5D3 /* SiSCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCourse.m; sourceTree = "<group>"; };
 		528A83FE1DAE68AF0076043A /* TestFetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528A84021DAE68AF0076043A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		528A84041DAE68AF0076043A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,14 +86,6 @@
 		528A84541DAE8E9F0076043A /* SiSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSTableViewController.m; sourceTree = "<group>"; };
 		528A84561DAE94D60076043A /* SiSComplexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSComplexManager.h; sourceTree = "<group>"; };
 		528A84571DAE94D60076043A /* SiSComplexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSComplexManager.m; sourceTree = "<group>"; };
-		52B93A901DB0016F004D3C3F /* SiSCourse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SiSCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
-		52B93A911DB0016F004D3C3F /* SiSCourse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SiSCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
-		52B93A921DB0016F004D3C3F /* SiSCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSCourse.h; sourceTree = "<group>"; };
-		52B93A931DB0016F004D3C3F /* SiSCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCourse.m; sourceTree = "<group>"; };
-		52B93A941DB0016F004D3C3F /* SiSUpcoming+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SiSUpcoming+CoreDataProperties.h"; sourceTree = "<group>"; };
-		52B93A951DB0016F004D3C3F /* SiSUpcoming+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SiSUpcoming+CoreDataProperties.m"; sourceTree = "<group>"; };
-		52B93A961DB0016F004D3C3F /* SiSUpcoming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSUpcoming.h; sourceTree = "<group>"; };
-		52B93A971DB0016F004D3C3F /* SiSUpcoming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSUpcoming.m; sourceTree = "<group>"; };
 		82647C6919C3399A04900721 /* libPods-TestFetch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestFetch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0319A1328AC463BFA4206A /* Pods-TestFetch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFetch.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFetch/Pods-TestFetch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,14 +199,18 @@
 		528A843D1DAE72430076043A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				52B93A901DB0016F004D3C3F /* SiSCourse+CoreDataProperties.h */,
-				52B93A911DB0016F004D3C3F /* SiSCourse+CoreDataProperties.m */,
-				52B93A921DB0016F004D3C3F /* SiSCourse.h */,
-				52B93A931DB0016F004D3C3F /* SiSCourse.m */,
-				52B93A941DB0016F004D3C3F /* SiSUpcoming+CoreDataProperties.h */,
-				52B93A951DB0016F004D3C3F /* SiSUpcoming+CoreDataProperties.m */,
-				52B93A961DB0016F004D3C3F /* SiSUpcoming.h */,
-				52B93A971DB0016F004D3C3F /* SiSUpcoming.m */,
+				520379891DB0EF4300D3B5D3 /* SiSUpcoming+CoreDataProperties.h */,
+				5203798A1DB0EF4400D3B5D3 /* SiSUpcoming+CoreDataProperties.m */,
+				5203798B1DB0EF4400D3B5D3 /* SiSUpcoming.h */,
+				5203798C1DB0EF4400D3B5D3 /* SiSUpcoming.m */,
+				5203798D1DB0EF4400D3B5D3 /* SiSObject+CoreDataProperties.h */,
+				5203798E1DB0EF4400D3B5D3 /* SiSObject+CoreDataProperties.m */,
+				5203798F1DB0EF4400D3B5D3 /* SiSObject.h */,
+				520379901DB0EF4400D3B5D3 /* SiSObject.m */,
+				520379911DB0EF4400D3B5D3 /* SiSCourse+CoreDataProperties.h */,
+				520379921DB0EF4400D3B5D3 /* SiSCourse+CoreDataProperties.m */,
+				520379931DB0EF4400D3B5D3 /* SiSCourse.h */,
+				520379941DB0EF4400D3B5D3 /* SiSCourse.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -207,6 +220,8 @@
 			children = (
 				528A84531DAE8E9F0076043A /* SiSTableViewController.h */,
 				528A84541DAE8E9F0076043A /* SiSTableViewController.m */,
+				520379801DB0C94500D3B5D3 /* SiSCourseDetail.h */,
+				520379811DB0C94500D3B5D3 /* SiSCourseDetail.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -404,15 +419,18 @@
 			files = (
 				528A84581DAE94D60076043A /* SiSComplexManager.m in Sources */,
 				528A84551DAE8E9F0076043A /* SiSTableViewController.m in Sources */,
-				52B93A9B1DB0016F004D3C3F /* SiSUpcoming.m in Sources */,
-				52B93A9A1DB0016F004D3C3F /* SiSUpcoming+CoreDataProperties.m in Sources */,
+				520379821DB0C94500D3B5D3 /* SiSCourseDetail.m in Sources */,
+				520379961DB0EF4400D3B5D3 /* SiSUpcoming.m in Sources */,
+				520379991DB0EF4400D3B5D3 /* SiSCourse+CoreDataProperties.m in Sources */,
+				520379981DB0EF4400D3B5D3 /* SiSObject.m in Sources */,
+				520379951DB0EF4400D3B5D3 /* SiSUpcoming+CoreDataProperties.m in Sources */,
 				528A84471DAE802E0076043A /* SiSDataManager.m in Sources */,
+				520379971DB0EF4400D3B5D3 /* SiSObject+CoreDataProperties.m in Sources */,
 				528A840F1DAE68AF0076043A /* TestFetch.xcdatamodeld in Sources */,
-				52B93A981DB0016F004D3C3F /* SiSCourse+CoreDataProperties.m in Sources */,
 				528A84511DAE8B6E0076043A /* SiSServerManager.m in Sources */,
 				528A84061DAE68AF0076043A /* AppDelegate.m in Sources */,
+				5203799A1DB0EF4400D3B5D3 /* SiSCourse.m in Sources */,
 				528A84031DAE68AF0076043A /* main.m in Sources */,
-				52B93A991DB0016F004D3C3F /* SiSCourse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

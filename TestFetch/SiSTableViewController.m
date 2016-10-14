@@ -10,6 +10,7 @@
 #import "SiSComplexManager.h"
 #import "SiSDataManager.h"
 #import "SiSCourse.h"
+#import "SiSCourseDetail.h"
 
 @interface SiSTableViewController ()
 
@@ -109,13 +110,13 @@ static NSInteger RowsInRequest = 5;
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-//    if ([[segue identifier] isEqualToString:@"SiSCourseDetail"]) {
-//       
-//        NSIndexPath* selectedIndexPath = [self.tableView indexPathForCell:sender];
-//        SiSCourseDetail* vc = [segue destinationViewController];
-//        vc.product = [self.jsonArray objectAtIndex:selectedIndexPath.row];
-//        
-//    }
+    if ([[segue identifier] isEqualToString:@"SiSCourseDetail"]) {
+       
+        NSIndexPath* selectedIndexPath = [self.tableView indexPathForCell:sender];
+        SiSCourseDetail* vc = [segue destinationViewController];
+        vc.course = [self.jsonArray objectAtIndex:selectedIndexPath.row];
+        
+    }
 }
 
 - (void)refresh:(UIRefreshControl *)refreshControl {

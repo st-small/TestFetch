@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFetch/SiSTableViewController.m"
-            timestampString = "498073303.142858"
+            filePath = "TestFetch/SiSDataManager.m"
+            timestampString = "498139530.024349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-printArray:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
