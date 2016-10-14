@@ -19,9 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //[[SiSDataManager sharedManager] deleteAllObjects];
-    [[SiSDataManager sharedManager] printAllObjects];
-    //[[SiSDataManager sharedManager] addCourseWithTitle:@"sajgjgd" andURL:@"sdjhsdffsd"];
-
+    //[[SiSDataManager sharedManager] printAllObjects];
+   
     return YES;
 }
 

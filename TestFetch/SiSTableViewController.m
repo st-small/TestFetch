@@ -98,12 +98,12 @@ static NSInteger RowsInRequest = 5;
 //        NSLog(@"\nпечтаю массив: %@", obj.title);
 //    }
     
-    NSLog(@"\nколичество в массиве: %d", self.jsonArray.count);
+    //NSLog(@"\nколичество в массиве: %d", self.jsonArray.count);
     
     SiSCourse* course = [self.jsonArray objectAtIndex:indexPath.row];
     cell.textLabel.text = course.title;
     
-    NSLog(@"%d %@", indexPath.row, cell.textLabel.text);
+    //NSLog(@"%d %@", indexPath.row, cell.textLabel.text);
     
     return cell;
 }

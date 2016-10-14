@@ -110,10 +110,10 @@
                 cell.textLabel.text = [NSString stringWithFormat:@"Location: %@", upc.location];
                 break;
             case 2:
-                cell.textLabel.text = [NSString stringWithFormat:@"End date: %@", upc.end_date];
+                cell.textLabel.text = [NSString stringWithFormat:@"Start date: %@", upc.start_date];
                 break;
             case 3:
-                cell.textLabel.text = [NSString stringWithFormat:@"Start date: %@", upc.start_date];
+                cell.textLabel.text = [NSString stringWithFormat:@"End date: %@", upc.end_date];
                 break;
         }
     }
