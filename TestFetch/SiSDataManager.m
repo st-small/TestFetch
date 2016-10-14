@@ -17,7 +17,14 @@
 
 + (SiSDataManager*) sharedManager {
     
-    SiSDataManager* manager = [[SiSDataManager alloc] init];
+    static SiSDataManager* manager = nil;
+    
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        
+        manager = [[SiSDataManager alloc] init];
+    });
     
     return manager;
 }
@@ -119,10 +126,6 @@
     } else {
         
         failure(requestError);
-    }
-    
-    for (SiSCourse* obj in resultArray) {
-        NSLog(@"RESULTARRAY PRINTING: %@ %@", obj.title, obj.url);
     }
     
 }

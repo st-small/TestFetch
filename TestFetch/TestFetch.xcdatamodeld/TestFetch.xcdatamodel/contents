@@ -3,8 +3,16 @@
     <entity name="SiSCourse" representedClassName="SiSCourse" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="upcoming" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SiSUpcoming" syncable="YES"/>
+    </entity>
+    <entity name="SiSUpcoming" representedClassName="SiSUpcoming" syncable="YES">
+        <attribute name="end_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="instructor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_date" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SiSCourse" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="SiSCourse" positionX="-3681" positionY="-26" width="128" height="88"/>
+        <element name="SiSUpcoming" positionX="-3420" positionY="2" width="128" height="103"/>
     </elements>
 </model>
